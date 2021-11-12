@@ -1,4 +1,5 @@
 #include <iostream>
+#include <Windows.h>
 using namespace std;
 
 //Set up SDL and all subsystems.
@@ -46,6 +47,7 @@ int Run() {
 
 // main function. Entry point of every C++ program.
 int main() {
-	
+	HANDLE window = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(window, 11);
 	return Run();
 }
